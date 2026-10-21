@@ -6,88 +6,47 @@ title: Expandify privacy policy
 
 Effective: 2026-10-21
 
-Expandify is an Android app made by imthefacc. You save shortcuts, such as "addr", together with the full text each one stands for. When you tap the floating bubble, Expandify replaces the shortcut you just typed with its full text. This page explains what the app reads, what it keeps, and where.
+Expandify is an Android app made by imthefacc. You save shortcuts, such as "addr", together with the full text each one stands for. When you tap the floating bubble, Expandify replaces the shortcut you just typed with its full text.
 
-**In short:** Expandify has no internet access. It has no account, ads, analytics or crash reporting. What you type is not saved, and nothing is sent to the developer or to anyone else. Your shortcuts and settings stay on your phone. They leave it only through Android's own backup, if you have it turned on, or in a backup file that you export yourself.
+**In short:** Expandify cannot connect to the internet. It has no account, ads, analytics or crash reporting, and it sends nothing to the developer or to anyone else. What you type is not saved. Your shortcuts and settings stay on your phone. They leave it only through Android's backup and phone-to-phone transfer, or in a file you export yourself.
 
 ## What Expandify reads, and why
 
-Expandify uses Android's Accessibility API (AccessibilityService). Before you turn it on, the app explains how it uses it and asks you to agree. Until you agree, and whenever the bubble is turned off, the service is paused and reads nothing.
+Expandify uses Android's Accessibility API (AccessibilityService). Before you turn it on, the app explains how it uses it and asks you to agree. Until you agree, and whenever the bubble is turned off, it is paused and reads nothing.
 
-While the bubble is on, Expandify can see:
+While the bubble is on, it can see the text field you are typing in (its text, cursor position and type, for example password or number), which app is in front, and whether the keyboard is open. It uses the app and keyboard state only to place the bubble and keep it out of apps you excluded. It reads the text of the field only:
 
-- **the text field you are typing in**: its text, the cursor position, and its type (for example password or number)
-- **which app is in front, and whether the keyboard is open**, so the bubble appears in the right place and stays out of apps you excluded
+- **when you tap the bubble**, to find the shortcut before the cursor and replace it with its full text. If no shortcut matches, the word before the cursor is shown briefly on the bubble so you can save it.
+- **when you drag the bubble**, to offer the word before the cursor on the "Add" target.
+- **right after an expansion**, to check the field again so a quick second tap repeats it in the right place.
 
-It reads the text of the field in these cases:
+Expandify never types anything unless you tap, and only into the field you are typing in. All of this happens in memory on your phone. The text is never saved, except a word you choose to save as a shortcut.
 
-- **When you tap the bubble.** It looks at the text before the cursor, finds your shortcut and replaces it with its full text. If you tap again shortly afterwards, it adds the same text again. Expandify never types anything unless you tap.
-- **When no shortcut matches.** The word before the cursor is shown briefly on the bubble. If you then drag the bubble onto "Add", that word is filled in so you can save it as a new shortcut.
-- **When you start dragging the bubble.** It reads the word before the cursor once, to offer it on the "Add" target.
-- **Right after an expansion.** When the field changes, Expandify checks whether the change came from you or from its own insert, so that another tap adds the text again only where it should.
+**Password fields are skipped.** Expandify does not read, expand in or show the bubble on fields that the app you are using marks as password fields, "visible password" ones included. It cannot recognize a password field that the app leaves unmarked.
 
-All of this happens on your phone, in memory. Expandify does not save the text of your fields. The only exception is a word that you save yourself as a new shortcut.
+To let you pick apps where the bubble stays hidden, Expandify can see which apps have a home-screen icon. Its other permissions only serve the bubble: display over other apps to draw it, a foreground service to keep it running, and an optional notification with a Stop button.
 
-**Password fields are never read.** Their text is skipped in every case above, Expandify never expands in them, and the bubble does not show there. Fields of the "visible password" type count as password fields too.
+## What is stored, and where
 
-## Where it is kept
+Expandify keeps your shortcuts (and when you last changed each), your settings, including the package names of apps you excluded, and whether you agreed to the Accessibility explanation. They stay in its private storage on your phone, which other apps cannot read. Expandify adds no encryption of its own.
 
-Everything is stored in Expandify's private storage on your phone:
+**Android backup.** If backup is on and your phone has a screen lock, Android may back up your shortcuts and settings to your Google account, end-to-end encrypted with your screen lock. Without a screen lock, Expandify is left out of the backup. On Android 12 and later, Android's transfer tool can also copy them directly to a new phone. Google handles these copies under its own terms, and the developer cannot see them. Records tied to this install, such as your Accessibility agreement, are never copied, so a new phone asks again. You can turn backup off in Android's settings.
 
-- **your shortcuts**: each shortcut, its full text and when you last changed it
-- **your settings**: theme, bubble look and motion, where the bubble rests on screen, when the bubble is shown, the apps you excluded (stored as their package names), the app icon you chose, and whether setup is done
-- **two per-install records**: whether you agreed to the Accessibility explanation, and whether the app has already asked for notification permission
+**Exported files.** In Settings › Export & import you can save your shortcuts, bubble look and settings to a file, wherever you choose. The file is plain, unencrypted JSON: anyone who opens it can read your shortcuts, so keep it safe. If you save it to a cloud folder, that service's terms apply.
 
-## Android backup and transfer to a new phone
+**Deleting.** Shortcuts and settings stay until you change or delete them. To delete everything, go to Android Settings › Apps › Expandify › Storage › Clear storage, or uninstall the app. Backups are managed in your Google account. Exported files stay wherever you saved them.
 
-Expandify allows Android's backup, but only when it is end-to-end encrypted with your phone's screen lock (PIN, pattern or password). If backup is turned on and your phone has a screen lock, Android copies your shortcuts and settings, encrypted, to your Google account. Without a screen lock, Expandify is left out of the cloud backup. On Android 12 and later, it also copies the same data when you move to a new phone with Android's transfer tool. Android and Google handle these copies under their own terms; Expandify does not send them and the developer cannot see them. The two per-install records above are left out of both, so a new phone always asks for your agreement again. You can turn backup off in Android's settings.
+## What reaches the developer, and your rights
 
-## What is not collected or shared
+The app sends the developer nothing. If you let your phone share usage and diagnostics data with Google, Google Play may show the developer crash and performance reports for Expandify, collected by Google under its own privacy policy.
 
-Expandify does not have the internet permission, so it cannot send anything anywhere. The developer receives no data from the app: no typed text, no shortcuts, no usage data, no device identifiers, no crash reports. The app contains no advertising, analytics or tracking code, and it shares nothing with third parties. Your expansion text goes into another app's field only when you tap the bubble in that app.
+If you email the developer, your address and message are used only to answer you (legal basis: legitimate interest). They stay in the developer's Gmail account, run by Google, which may store them outside the EU and UK, and are deleted on request or once no longer needed.
 
-## Backup files you export
+If you live in the EU or UK, you can ask to access, correct or delete personal data about you, or object to its use, and you can complain to your local data protection authority.
 
-In Settings › Export & import you can save your data to a file and import it later, for example on a new phone. You choose what goes in it:
+## Changes
 
-- **shortcuts**: each shortcut and its full text
-- **personalization**: the bubble's look and motion
-- **settings**: theme, shortcut and repeat options, when the bubble is shown, and the package names of the apps you excluded
-
-The file is a plain, unencrypted JSON file. Anyone who can open it can read your shortcuts, so keep it somewhere safe. Expandify saves it only where you choose in Android's file picker. If you save it to a cloud folder, that service's terms and privacy policy apply to it. Importing reads only the file you pick.
-
-## Permissions
-
-- **Accessibility** (Accessibility service): to read the focused text field as described above and replace your shortcut with its full text. You turn it on in Android settings and can turn it off at any time; Expandify cannot expand anything without it.
-- **Display over other apps** (`SYSTEM_ALERT_WINDOW`): to show the floating bubble, its drag targets and the quick "Add shortcut" window above the app you are typing in.
-- **Foreground service** (`FOREGROUND_SERVICE`, `FOREGROUND_SERVICE_SPECIAL_USE`): to keep the bubble running while you have it turned on.
-- **Notifications** (`POST_NOTIFICATIONS`), optional, Android 13 and later: to show a quiet notification with a Stop button while the bubble runs. The bubble works without it.
-- **App visibility**: Expandify can see apps that have a home-screen icon, to list them when you choose apps where the bubble should stay hidden.
-- **Battery**: Expandify does not ask for a battery exemption itself. The optional setup step only opens Android's battery settings, where you can choose to let it run unrestricted.
-
-## How long data is kept, and how to delete it
-
-- Text read from your fields is kept in memory only while it is needed. It is never written to storage.
-- Shortcuts and settings are kept until you change or delete them. You can delete shortcuts one by one in the app.
-- To delete everything Expandify has stored, go to Android Settings › Apps › Expandify › Storage › Clear storage, or uninstall the app.
-- Android backups live in your Google account and are managed there.
-- Exported files are yours. Delete them wherever you saved them.
-
-## Security
-
-Your data stays in the app's private storage, which Android keeps other apps from reading. The app's services can't be started by other apps. Expandify adds no encryption of its own; cloud backups are encrypted by Android with your screen lock, as described above. An exported file is not encrypted.
-
-## Your rights
-
-The developer holds no data about you, because nothing reaches them from the app. You can see, change, export and delete everything Expandify stores, directly in the app or through Android's settings. If you write to the developer, your email address and message are used only to reply to you. If you live in the EU or UK, you have the right to access, correct or delete personal data about you, and to complain to your local data protection authority.
-
-## Children
-
-Expandify is not aimed at children. It collects no personal data from anyone, children included.
-
-## Changes to this policy
-
-If this policy changes, the new version will be posted on this page with a new effective date. If a change affects how the Accessibility API is used, the app will ask for your agreement again.
+If this policy changes, the new version will be posted here with a new effective date. If a change affects how the Accessibility API is used, the app will ask for your agreement again.
 
 ## Contact
 
