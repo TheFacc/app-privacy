@@ -4,9 +4,9 @@ title: Expandify privacy policy
 
 # Expandify privacy policy
 
-Effective: 2026-10-21
+Effective: 2026-10-24
 
-Expandify is an Android app made by imthefacc. You save shortcuts, such as "addr", together with the full text each one stands for. When you tap the floating bubble, Expandify replaces the shortcut you just typed with its full text.
+Expandify is an Android app made by facc. You save shortcuts, such as "addr", together with the full text each one stands for. When you tap the floating bubble, Expandify replaces the shortcut you just typed with its full text.
 
 **In short:** Expandify cannot connect to the internet. It has no account, ads, analytics or crash reporting, and it sends nothing to the developer or to anyone else. What you type is not saved. Your shortcuts and settings stay on your phone. They leave it only through Android's backup and phone-to-phone transfer, or in a file you export yourself.
 
